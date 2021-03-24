@@ -22,4 +22,8 @@ class Artist
     Song.all.count
   end 
   
+  def songs
+    @songs
+  end 
+  
 end
