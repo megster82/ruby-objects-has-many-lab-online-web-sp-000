@@ -13,16 +13,13 @@ class Artist
     @@song_count += 1 
   end 
   
-  def songs
-    @songs 
-  end
-  
-  def add_song_by_name(song_name)
-    song = Song.new(song_name, name)
+  def add_song_by_name(name)
+    song = Song.new(name)
+    add_song(song)
   end 
   
-  def song_count
-    Song.all.count {|song| song.name}
+  def self.song_count
+    Song.all.count
   end 
   
 end
